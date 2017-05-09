@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+	<title>DEFAULT DOMAIN</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+	<link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Teko:400,700,600,500,300" >
+
+	<style type="text/less">
+		/* mixins */
+		.flex() {
+			display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+			display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+			display: -ms-flexbox;      /* TWEENER - IE 10 */
+			display: -webkit-flex;     /* NEW - Chrome */
+			display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+		}
+
+		.flex--center() {
+			-webkit-align-items: center;
+			-webkit-box-align: center;
+			-webkit-box-direction: normal;
+			-webkit-box-pack: center;
+			-webkit-justify-content: center;
+		}
+
+		.flex--column() {
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+		}
+		.flex--row() {
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-webkit-flex-direction: row;
+			-ms-flex-direction: row;
+			flex-direction: row;
+		}
+
+		.flex-flex(@flex) {
+			-webkit-box-flex: @flex;      /* OLD - iOS 6-, Safari 3.1-6 */
+			-moz-box-flex: @flex;         /* OLD - Firefox 19- */
+			-webkit-flex: @flex;          /* Chrome */
+			-ms-flex: @flex;              /* IE 10 */
+			flex: @flex;    
+		}
+
+		.flex-content(@content) {
+			-webkit-justify-content: @content;
+			-ms-flex-pack: @content;
+			justify-content: @content;
+		}
+
+		.filter(@filter) {
+			-webkit-filter: @filter;
+			filter: @filter;
+		}
+		/* END mixins */
+
+
+		.default {
+			min-height: 100vh;
+		}
+
+
+		.default {
+			.flex();
+			.flex--center();
+		}
+	
+
+
+		@media (min-width: 768px) {
+	
+		}
+
+
+		.default-bg {
+			background: #000 no-repeat center center url('http://lorempixel.com/1280/700/');
+			background-size: cover;
+			color: white;
+
+			.filter(brightness(.6) blur(2px));
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			/*display: none;*/
+			z-index: -1;
+		}
+
+		.center {
+			.flex();
+			.flex--column();
+			text-align: center;
+			align-items: center;
+			
+			-webkit-align-items: center;
+			-webkit-box-align: center;
+			
+			-webkit-box-direction: normal;
+			-webkit-box-pack: center;
+			-webkit-justify-content: center;
+		}
+		.logo {
+			font-size: 100px;
+		}
+
+		body {
+			position: relative;
+		
+			color: white;
+			background-color: black;
+			align-items: center;
+			justify-content: center;
+		}
+
+		h1 {
+			font-family: Teko;
+			letter-spacing: 10px;
+			text-align: center;
+			font-size: 4rem;
+		}
+
+
+	</style>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>
+
+</head>  
+<body class="default">
+	<div class="default-bg"></div>
+	<div>
+			<div class="center">
+				<h1>DEFAULT DOMAIN</h1>
+				<div class="logo">
+					<span class="fa fa-server"></span>
+				</div>
+			</div>
+		
+	</div>
+</body>  
+</html> 
