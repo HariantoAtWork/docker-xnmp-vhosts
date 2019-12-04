@@ -19,7 +19,19 @@ Available pages
 - check default page: http://php5.localhost
 - check default page: http://php7.localhost
 
-> Make sure you set your host file or dnsmasq this domains to 127.0.0.1
+> Make sure you set your host file these domains to 127.0.0.1
+
+### Optional: Dnsmasq
+
+
+File: /etc/resolver/localhost
+
+```
+127.0.0.1
+```
+
+> Create this file as user _root_
+
 
 PhpMyAdmin
 
