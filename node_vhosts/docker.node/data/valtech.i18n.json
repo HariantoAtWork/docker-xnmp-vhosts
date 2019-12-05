@@ -1,0 +1,89 @@
+{
+    "label": {
+        "firstName": "名前",
+        "lastName": "姓",
+        "jobTitle": "機能",
+        "company": "会社",
+        "country": "国",
+        "email": "電子メール",
+        "downloadNow": "Download nu"
+    },
+    "selectOption": {
+        "country": [
+            {
+                "text": "国",
+                "value": "",
+                "disabled": true,
+                "selected": true
+            },
+            {
+                "text": "Argentina",
+                "value": "Argentina"
+            },
+            {
+                "text": "Australia",
+                "value": "Australia"
+            },
+            {
+                "text": "Brazil",
+                "value": "Brazil"
+            },
+            {
+                "text": "Canada",
+                "value": "Canada"
+            },
+            {
+                "text": "China",
+                "value": "China"
+            },
+            {
+                "text": "Denmark",
+                "value": "Denmark"
+            },
+            {
+                "text": "France",
+                "value": "France"
+            },
+            {
+                "text": "Germany",
+                "value": "Germany"
+            },
+            {
+                "text": "India",
+                "value": "India"
+            },
+            {
+                "text": "Netherlands",
+                "value": "Netherlands"
+            },
+            {
+                "text": "Singapore",
+                "value": "Singapore"
+            },
+            {
+                "text": "Sweden",
+                "value": "Sweden"
+            },
+            {
+                "text": "Switzerland",
+                "value": "Switzerland"
+            },
+            {
+                "text": "Ukraine",
+                "value": "Ukraine"
+            },
+            {
+                "text": "United Kingdom",
+                "value": "United Kingdom"
+            },
+            {
+                "text": "USA",
+                "value": "USA"
+            },
+            {
+                "text": "Other",
+                "value": "Other"
+            }
+        ]
+    }
+}

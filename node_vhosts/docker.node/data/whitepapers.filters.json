@@ -1,0 +1,38 @@
+[
+    {
+		"text": "Industries",
+		"value": "industry",
+		"list": [
+			{ "text": "Automotive", "value": 1 },
+			{ "text": "Travel and Hospitality", "value": 2 },
+			{ "text": "Media and Entertainment", "value": 3 },
+			{ "text": "Retail and Luxury", "value": 4 },
+			{ "text": "Healthcare", "value": 5 },
+			{ "text": "Financial", "value": 6 }
+		]
+	},
+	{
+		"text": "Services",
+		"value": "service",
+		"list": [
+			{ "text": "CX Strategy", "value": 7 },
+			{ "text": "Connected Services", "value": 8 },
+			{ "text": "Data Science", "value": 9 },
+			{ "text": "Experience & Commerce Platforms", "value": 10 },
+			{ "text": "Content & Campaigns", "value": 11 },
+			{ "text": "Emerging Technology", "value": 12 }
+		]
+	},
+	{
+		"text": "Platforms",
+		"value": "platform",
+		"list": [
+			{ "text": "Sitecore", "value": 13 },
+			{ "text": "Episerver", "value": 14 },
+			{ "text": "SAP Hybris", "value": 15 },
+			{ "text": "Salesforce", "value": 16 },
+			{ "text": "Adobe", "value": 17 },
+			{ "text": "Magento", "value": 18 }
+		]
+	}
+]

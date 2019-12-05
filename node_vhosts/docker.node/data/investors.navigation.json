@@ -1,0 +1,111 @@
+[
+    {
+        "id": "1",
+        "name": "Financial Information",
+        "links": [
+            {
+                "name": "SEC Fillings",
+                "url": "https://goo.gl/maps/bc4mK7Sf21z",
+                "target": ""
+            },
+            {
+                "name": "Quarterly earnings",
+                "url": "https://goo.gl/maps/bc4mK7Sf21z",
+                "target": ""
+            },
+            {
+                "name": "News",
+                "url": "https://goo.gl/maps/bc4mK7Sf21z",
+                "target": ""
+            },
+            {
+                "name": "Financial Statements",
+                "url": "https://goo.gl/maps/bc4mK7Sf21z",
+                "target": ""
+            },
+            {
+                "name": "Annual Report",
+                "url": "https://goo.gl/maps/bc4mK7Sf21z",
+                "target": ""
+            },
+            {
+                "name": "Investor Data Sheet",
+                "url": "https://goo.gl/maps/bc4mK7Sf21z",
+                "target": ""
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Share information",
+        "links": [
+            {
+                "name": "Quote & chart",
+                "url": "https://goo.gl/maps/bc4mK7Sf21z",
+                "target": ""
+            },
+            {
+                "name": "Analyst coverage",
+                "url": "https://goo.gl/maps/bc4mK7Sf21z",
+                "target": ""
+            },
+            {
+                "name": "Corporate Governance",
+                "url": "https://goo.gl/maps/bc4mK7Sf21z",
+                "target": ""
+            },
+            {
+                "name": "Overview",
+                "url": "https://goo.gl/maps/bc4mK7Sf21z",
+                "target": ""
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Governance Documents",
+        "links": [
+            {
+                "name": "Management",
+                "url": "https://goo.gl/maps/bc4mK7Sf21z",
+                "target": ""
+            },
+            {
+                "name": "Board of directors",
+                "url": "https://goo.gl/maps/bc4mK7Sf21z",
+                "target": ""
+            },
+            {
+                "name": "Committee composition",
+                "url": "https://goo.gl/maps/bc4mK7Sf21z",
+                "target": ""
+            },
+            {
+                "name": "Annual General Meeting",
+                "url": "https://goo.gl/maps/bc4mK7Sf21z",
+                "target": ""
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Resources",
+        "links": [
+            {
+                "name": "Investor FAQs",
+                "url": "https://goo.gl/maps/bc4mK7Sf21z",
+                "target": ""
+            },
+            {
+                "name": "Email Alerts",
+                "url": "https://goo.gl/maps/bc4mK7Sf21z",
+                "target": ""
+            },
+            {
+                "name": "Contact IR",
+                "url": "https://goo.gl/maps/bc4mK7Sf21z",
+                "target": ""
+            }
+        ]
+    }
+]
