@@ -37,3 +37,40 @@ PhpMyAdmin
 
 - check: http://localhost:8080/
 - user: root, pass: root
+
+## Docker stuff
+
+Check Docker Network
+
+```bash
+docker network ls
+```
+
+> remember `NAME` for `--net` flag
+
+Which docker container runs my database
+
+```bash
+docker ps
+```
+
+> remember `NAMES` for `--link` flag
+
+```bash
+docker run --rm --net docker-xnmp-vhosts_default --link docker-xnmp-vhosts_db_1:db -it alpine:latest /bin/sh
+```
+
+> `db` is the custom link name (host) you want to connect later in Alpine Shell
+> You will go inside Alpine Shell
+
+### Inside Alpine Shell
+
+```bash
+# install mysql-client
+apk add --update mysql-client
+
+# open mysql shell and connect to host 'db'
+mysql -h db  
+```
+
+
