@@ -41,7 +41,7 @@ services:
   # docker-node:
   #   image: harianto/api-sylo-space
   #   volumes:
-  #     - ./node_vhosts/docker.node/api:/home/node/app/src/data
+  #     - ./node_vhosts/docker.node/data:/home/node/app/src/data
   #   volumes_from:
   #     - data
 
