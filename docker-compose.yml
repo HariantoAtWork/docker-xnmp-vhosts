@@ -38,6 +38,13 @@ services:
     ports:
       - "8080:80"
 
+  # docker-node:
+  #   image: harianto/api-sylo-space
+  #   volumes:
+  #     - ./node_vhosts/docker.node/api:/home/node/app/src/data
+  #   volumes_from:
+  #     - data
+
   data:
     image: alpine:latest
     command: /bin/sh
