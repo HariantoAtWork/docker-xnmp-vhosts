@@ -3,6 +3,7 @@ version: '2'
 services:
   nginx:
     image: nginx:alpine
+    restart: always
     links:
       - fpm5-6-23
       - fpm7-0-8
@@ -16,16 +17,19 @@ services:
 
   fpm5-6-23:
     image: php:5.6.23-fpm-alpine
+    restart: always
     volumes_from:
       - data
 
   fpm7-0-8:
     image: php:7.0.8-fpm-alpine
+    restart: always
     volumes_from:
       - data
 
   db:
     image: harianto/mysql
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
     volumes:
@@ -33,6 +37,7 @@ services:
 
   dbadmin:
     image: phpmyadmin/phpmyadmin
+    restart: always
     depends_on:
       - db
     ports:
@@ -40,6 +45,7 @@ services:
 
   # docker-node:
   #   image: harianto/api-sylo-space
+  #   restart: always
   #   volumes:
   #     - ./node_vhosts/docker.node/data:/home/node/app/src/data
   #   volumes_from:
