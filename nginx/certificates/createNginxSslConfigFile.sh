@@ -5,7 +5,7 @@
 
 [[ ! -f "localhost/localhost.crt" || ! -f "localhost/localhost.key" ]] && ./createLocalhost.sh localhost && echo localhost.* CREATED
 
-OUTPUT=`cat <<EOF
+OUTPUT=`cat <<'EOF'
 server {
 	server_name ~^ssl(\.dev|\.localhost)?$;
 	return 301 https://$host$request_uri;
