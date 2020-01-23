@@ -1,9 +1,9 @@
 #!/bin/bash
-[ -f "../enabled/ssl.conf" ] && echo -e 'Error Script: ../enabled/ssl.conf already exist!' && exit 0
+[ -f "../../enabled/ssl.conf" ] && echo -e 'Error Script: ../../enabled/ssl.conf already exist!' && exit 0
 
 [[ ! -f "RootCA.pem" || ! -f "RootCA.key" ]] && ./createRootCA.sh && echo RootCA CREATED
 
-[[ ! -f "localhost/localhost.crt" || ! -f "localhost/localhost.key" ]] && ./createLocalhost.sh localhost && echo localhost.* CREATED
+[[ ! -f "../localhost/localhost.crt" || ! -f "../localhost/localhost.key" ]] && ./createLocalhost.sh localhost && echo localhost.* CREATED
 
 OUTPUT=`cat <<'EOF'
 server {
@@ -46,5 +46,5 @@ EOF
 `
 # OUTPUT: EOF
 
-echo -e "$OUTPUT" > ../enabled/ssl.conf
+echo -e "$OUTPUT" > ../../enabled/ssl.conf
 echo DONE.

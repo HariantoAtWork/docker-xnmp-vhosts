@@ -29,7 +29,7 @@ echo -e "$OUTPUT"
 echo -e "$OUTPUT" > domains.ext
 
 # Create Dir
-mkdir $1
+mkdir ../$1
 # Generate Certificates and Keys for Domain
-openssl req -new -nodes -newkey rsa:2048 -keyout $1/$1.key -out $1/$1.csr -subj "/CN=localhost"
-openssl x509 -req -sha256 -days 1024 -in $1/$1.csr -CA RootCA.pem -CAkey RootCA.key -CAcreateserial -extfile domains.ext -out $1/$1.crt
+openssl req -new -nodes -newkey rsa:2048 -keyout ../$1/$1.key -out ../$1/$1.csr -subj "/CN=localhost"
+openssl x509 -req -sha256 -days 1024 -in ../$1/$1.csr -CA ../RootCA.pem -CAkey ../RootCA.key -CAcreateserial -extfile domains.ext -out ../$1/$1.crt
