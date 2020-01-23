@@ -18,6 +18,8 @@ Available pages
 - check default page: http://test.example.com.localhost
 - check default page: http://php5.localhost
 - check default page: http://php7.localhost
+- check default page: http://ssl.localhost
+- check default page: http://test.ssl.localhost
 
 > Make sure you set your host file these domains to 127.0.0.1
 
