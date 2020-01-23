@@ -127,8 +127,7 @@
 			text-align: center;
 			font-size: 4rem;
 		}
-
-
+		
 	</style>
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>
@@ -138,7 +137,7 @@
 	<div class="default-bg"></div>
 	<div>
 			<div class="center">
-				<h1>DEFAULT DOMAIN</h1>
+				<h1><?= strtoupper($_SERVER['HTTP_HOST']) ?></h1>
 				<div class="logo">
 					<span class="fa fa-server"></span>
 				</div>
