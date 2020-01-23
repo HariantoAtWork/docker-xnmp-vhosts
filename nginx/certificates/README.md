@@ -16,4 +16,10 @@ This will create:
 Check https://www.bounca.org/tutorials/install_root_certificate.html
 how to install `RootCA.(crt|pem)` and `RootCA.key` in your system
 
+## custom DNS
+
+Copy `dns.txt.example` to `dns.txt` and add/remove domains to your wishes
+And run: `./createLocalhost.sh localhost`
+Restart your NGINX: `docker-compose restart nginx` in the root project (Where `docker-compose.yml` is)
+
 (WIP)
