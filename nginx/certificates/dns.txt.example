@@ -1,0 +1,10 @@
+localhost
+*.localhost
+*.example.com.localhost
+example.com.localhost
+php5.localhost
+*.php5.localhost
+php7.localhost
+*.php7.localhost
+ssl.localhost
+*.ssl.localhost
