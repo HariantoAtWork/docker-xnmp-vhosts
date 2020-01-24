@@ -42,6 +42,9 @@ PhpMyAdmin
 
 ## Docker stuff
 
+Run shell from a running docker container
+
+
 Check Docker Network
 
 ```bash
