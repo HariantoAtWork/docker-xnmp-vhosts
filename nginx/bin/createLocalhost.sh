@@ -1,4 +1,6 @@
 #!/bin/bash
+CERT_DIR=../certificates
+
 if [[ $# -eq 0 ]] ; then
     echo -e 'Error Script: Need argument\n\n\tEXAMPLE: ./createLocalhost.sh localhost'
     exit 0
@@ -29,7 +31,7 @@ echo -e "$OUTPUT"
 echo -e "$OUTPUT" > domains.ext
 
 # Create Dir
-mkdir ../$1
+mkdir -p $CERT_DIR/$1
 # Generate Certificates and Keys for Domain
-openssl req -new -nodes -newkey rsa:2048 -keyout ../$1/$1.key -out ../$1/$1.csr -subj "/CN=localhost"
-openssl x509 -req -sha256 -days 1024 -in ../$1/$1.csr -CA ../RootCA.pem -CAkey ../RootCA.key -CAcreateserial -extfile domains.ext -out ../$1/$1.crt
+openssl req -new -nodes -newkey rsa:2048 -keyout $CERT_DIR/$1/$1.key -out $CERT_DIR/$1/$1.csr -subj "/CN=localhost"
+openssl x509 -req -sha256 -days 1024 -in $CERT_DIR/$1/$1.csr -CA $CERT_DIR/RootCA.pem -CAkey $CERT_DIR/RootCA.key -CAcreateserial -extfile domains.ext -out $CERT_DIR/$1/$1.crt

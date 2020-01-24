@@ -1,9 +1,12 @@
 #!/bin/bash
-[ -f "../../enabled/ssl.conf" ] && echo -e 'Error Script: ../../enabled/ssl.conf already exist!' && exit 0
+CERT_DIR=../certificates
+ENABLED_DIR=../enabled
 
-[[ ! -f "RootCA.pem" || ! -f "RootCA.key" ]] && ./createRootCA.sh && echo RootCA CREATED
-
-[[ ! -f "../localhost/localhost.crt" || ! -f "../localhost/localhost.key" ]] && ./createLocalhost.sh localhost && echo localhost.* CREATED
+[ -f "$ENABLED_DIR/ssl.conf" ] && echo -e "Error Script: $ENABLED_DIR/ssl.conf already exist!" && exit 0
+# RootCA
+[[ ! -f "$CERT_DIR/RootCA.pem" || ! -f "$CERT_DIR/RootCA.key" ]] && ./createRootCA.sh && echo RootCA CREATED
+# localhost
+[[ ! -f "$CERT_DIR/localhost/localhost.crt" || ! -f "$CERT_DIR/localhost/localhost.key" ]] && ./createLocalhost.sh localhost && echo localhost.* CREATED
 
 OUTPUT=`cat <<'EOF'
 server {
@@ -46,5 +49,5 @@ EOF
 `
 # OUTPUT: EOF
 
-echo -e "$OUTPUT" > ../../enabled/ssl.conf
+echo -e "$OUTPUT" > $ENABLED_DIR/ssl.conf
 echo DONE.
