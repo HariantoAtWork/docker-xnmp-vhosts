@@ -76,3 +76,30 @@ mysql -h db
 ```
 
 
+## SSL Certificates
+
+Make localhost domains work with HTTPS
+
+Go to `nginx/bin` directory and run from there:
+
+```bash
+./createNginxSslConfigFile.sh
+```
+
+This will create:
+
+- nginx/certificates/RootCA.crt
+- nginx/certificates/RootCA.pem
+- nginx/certificates/RootCA.key
+- nginx/certificates/RootCA.srl
+- nginx/certificates/localhost/localhost.crt
+- nginx/certificates/localhost/localhost.key
+- nginx/certificates/localhost/localhost.csr
+- nginx/enabled/ssl.conf
+
+
+Check https://www.bounca.org/tutorials/install_root_certificate.html
+how to install `RootCA.(crt|pem)` and `RootCA.key` in your system
+
+
+> After installing RootCA's you might reboot your computer, to make `localhost/localhost.*` files work for your https connections
