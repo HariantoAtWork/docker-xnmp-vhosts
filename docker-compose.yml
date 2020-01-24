@@ -12,6 +12,7 @@ services:
     volumes:
       - ./nginx/enabled:/etc/nginx/conf.d
       - ./nginx/snippets:/nginx/snippets
+      - ./nginx/certificates:/nginx/certificates
     volumes_from:
       - data
 
