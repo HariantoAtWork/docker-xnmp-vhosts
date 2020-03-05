@@ -2,4 +2,4 @@ db/
 nginx/
 tmp/
 vhosts/
-node_vhosts/
+vhosts_app/
