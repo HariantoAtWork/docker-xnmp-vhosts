@@ -19,6 +19,7 @@ Available pages
 - check default page: http://test.example.com.localhost
 - check default page: http://php5.localhost
 - check default page: http://php7.localhost
+- check default page: http://php7-ext.localhost
 - check default page: http://ssl.localhost
 - check default page: http://test.ssl.localhost
 
