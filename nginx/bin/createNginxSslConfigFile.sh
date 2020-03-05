@@ -24,7 +24,7 @@ server {
 		try_files $uri $uri/ /index.php$is_args$args;
 	}
 
-	include /nginx/snippets/php7.0.8-fpm.conf;
+	include /nginx/snippets/php-fpm-default.conf;
 }
 
 # SUBDOMAINS
@@ -43,7 +43,7 @@ server {
 		try_files $uri $uri/ /index.php$is_args$args;
 	}
 
-	include /nginx/snippets/php7.0.8-fpm.conf;
+	include /nginx/snippets/php-fpm-default.conf;
 }
 EOF
 `
