@@ -13,6 +13,8 @@ basicConstraints = CA:FALSE
 keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
 subjectAltName = @alt_names
 [alt_names]
+IP.1 = 10.10.10.20
+IP.2 = 127.0.0.1
 EOF
 `
 # OUTPUT: EOF
