@@ -6,7 +6,7 @@ ENABLED_DIR=../enabled
 # RootCA
 ./createRootCA.sh && echo RootCA CREATED
 # localhost
-./createLocalhost.sh localhost && echo localhost.* CREATED
+./createLocalhost.sh localhost && echo "localhost.(crt|key|csr) CREATED"
 
 OUTPUT=`cat <<'EOF'
 server {
