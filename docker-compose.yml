@@ -7,6 +7,7 @@ services:
     links:
       - fpm5-6-23
       - fpm7-0-8
+      - fpm-ext7-0-8
     ports:
       - "80:80"
       - "443:443"
@@ -67,4 +68,3 @@ services:
     volumes:
       - ./vhosts:/vhosts
       - ./tmp:/tmp
-
