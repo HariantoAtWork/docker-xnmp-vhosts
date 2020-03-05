@@ -29,6 +29,14 @@ services:
     volumes_from:
       - data
 
+  fpm-ext7-0-8:
+    build:
+      context: ./dockerfiles
+      dockerfile: php-7-0-8-fpm-ext-alpine.Dockerfile
+    restart: always
+    volumes_from:
+      - data
+
   db:
     image: harianto/mysql
     restart: always
