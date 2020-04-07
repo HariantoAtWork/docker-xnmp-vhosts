@@ -10,13 +10,13 @@ ENABLED_DIR=../enabled
 
 OUTPUT=`cat <<'EOF'
 server {
-	server_name ~^ssl(\.dev|\.localhost)?$;
+	server_name ~^ssl(\.localhost)?$;
 	return 301 https://$host$request_uri;
 }
 
 server {
     include /nginx/snippets/ssl-domain.conf;
-	server_name ~^ssl(\.dev|\.localhost)?$;
+	server_name ~^ssl(\.localhost)?$;
 
 	index index.html index.php;
     root /vhosts/ssl/httpdocs;
@@ -29,13 +29,13 @@ server {
 
 # SUBDOMAINS
 server {
-	server_name ~^((?<subdomain>.*)\.)ssl(\.dev|\.localhost)?$;
+	server_name ~^((?<subdomain>.*)\.)ssl(\.localhost)?$;
 	return 301 https://$host$request_uri;
 }
 
 server {
 	include /nginx/snippets/ssl-domain.conf;
-	server_name ~^((?<subdomain>.*)\.)ssl(\.dev|\.localhost)?$;
+	server_name ~^((?<subdomain>.*)\.)ssl(\.localhost)?$;
 
 	index index.html index.php;
 	root /vhosts/ssl/subdomains/${subdomain}/httpdocs;
