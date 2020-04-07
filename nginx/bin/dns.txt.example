@@ -6,5 +6,7 @@ php5.localhost
 *.php5.localhost
 php7.localhost
 *.php7.localhost
+php7-ext.localhost
+*.php7-ext.localhost
 ssl.localhost
 *.ssl.localhost
