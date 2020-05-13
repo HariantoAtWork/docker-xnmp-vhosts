@@ -51,20 +51,16 @@ services:
     restart: always
     depends_on:
       - db
-    ports:
-      - "8080:80"
-
-  # docker-node:
-  #   image: harianto/api-sylo-space
-  #   restart: always
-  #   volumes:
-  #     - ./node_vhosts/docker.node/data:/home/node/app/src/data
-  #   volumes_from:
-  #     - data
 
   data:
     image: alpine:latest
-    command: /bin/sh
+    command: echo "--- Docker data volume READY."
     volumes:
       - ./vhosts:/vhosts
       - ./tmp:/tmp
+
+# create network: docker network create xnmp-network
+networks:
+  default:
+    external:
+      name: xnmp-network
