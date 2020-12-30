@@ -5,11 +5,11 @@ services:
     image: nginx:alpine
     restart: always
     links:
-      - fpm5-6-23
-      - fpm7-0-8
-      - fpm-ext7-0-8
-      - fpm8-0-0
-      - fpm-ext8-0-0
+      - 5-6-23-fpm
+      - 7-0-8-fpm
+      - 7-0-8-fpm-ext
+      - 8-0-0-fpm
+      - 8-0-0-fpm-ext
     ports:
       - "80:80"
       - "443:443"
@@ -20,19 +20,19 @@ services:
     volumes_from:
       - data
 
-  fpm5-6-23:
+  5-6-23-fpm:
     image: php:5.6.23-fpm-alpine
     restart: always
     volumes_from:
       - data
 
-  fpm7-0-8:
+  7-0-8-fpm:
     image: php:7.0.8-fpm-alpine
     restart: always
     volumes_from:
       - data
 
-  fpm-ext7-0-8:
+  7-0-8-fpm-ext:
     build:
       context: ./dockerfiles
       dockerfile: php-7-0-8-fpm-ext-alpine.Dockerfile
@@ -40,13 +40,13 @@ services:
     volumes_from:
       - data
 
-  fpm8-0-0:
+  8-0-0-fpm:
     image: php:8.0.0-fpm-alpine
     restart: always
     volumes_from:
       - data
 
-  fpm-ext8-0-0:
+  8-0-0-fpm-ext:
     build:
       context: ./dockerfiles
       dockerfile: php-8-0-0-fpm-ext-alpine.Dockerfile
