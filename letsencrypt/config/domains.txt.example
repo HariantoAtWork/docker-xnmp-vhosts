@@ -1,0 +1,2 @@
+domain.ext *.domain.ext
+domain2.ext *.domain2.ext *.sub1.domain2.ext *.sub2.domain2.ext

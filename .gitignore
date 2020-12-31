@@ -3,3 +3,4 @@ nginx/
 tmp/
 vhosts/
 vhosts_app/
+letsencrypt/

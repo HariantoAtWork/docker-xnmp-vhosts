@@ -17,6 +17,7 @@ services:
       - ./nginx/enabled:/etc/nginx/conf.d
       - ./nginx/snippets:/nginx/snippets
       - ./nginx/certificates:/nginx/certificates
+      # - ./letsencrypt/data:/etc/letsencrypt:ro
     volumes_from:
       - data
 
