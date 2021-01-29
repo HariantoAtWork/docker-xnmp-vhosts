@@ -14,10 +14,10 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx/enabled:/etc/nginx/conf.d
-      - ./nginx/snippets:/nginx/snippets
-      - ./nginx/certificates:/nginx/certificates
-      # - ./letsencrypt/data:/etc/letsencrypt:ro
+      - ./data/nginx/enabled:/etc/nginx/conf.d
+      - ./data/nginx/snippets:/nginx/snippets
+      - ./data/nginx/certificates:/nginx/certificates
+      # - ./data/letsencrypt/data:/etc/letsencrypt:ro
     volumes_from:
       - data
 
@@ -34,9 +34,7 @@ services:
       - data
 
   7-0-8-fpm-ext:
-    build:
-      context: ./dockerfiles
-      dockerfile: php-7-0-8-fpm-ext-alpine.Dockerfile
+    build: build/7-0-8-fpm-ext
     restart: always
     volumes_from:
       - data
@@ -48,9 +46,7 @@ services:
       - data
 
   8-0-0-fpm-ext:
-    build:
-      context: ./dockerfiles
-      dockerfile: php-8-0-0-fpm-ext-alpine.Dockerfile
+    build: build/8-0-0-fpm-ext
     restart: always
     volumes_from:
       - data
@@ -61,7 +57,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
     volumes:
-      - ./db/storage:/var/lib/mysql
+      - ./data/db:/var/lib/mysql
 
   dbadmin:
     image: phpmyadmin/phpmyadmin
@@ -77,8 +73,8 @@ services:
     image: alpine:latest
     command: echo "--- Docker data volume READY."
     volumes:
-      - ./vhosts:/vhosts
-      - ./tmp:/tmp
+      - ./data/vhosts:/vhosts
+      - ./data/tmp:/tmp
 
 # create network: docker network create xnmp-network
 networks:

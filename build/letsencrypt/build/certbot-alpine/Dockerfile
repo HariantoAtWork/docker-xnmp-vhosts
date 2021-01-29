@@ -7,6 +7,6 @@ RUN apk add --no-cache --update \
 ENV HOME=/root
 WORKDIR $HOME
 
-ADD sh/renew-crt.sh $HOME
+ADD docker-entrypoint.sh $HOME
 
-ENTRYPOINT ~/renew-crt.sh
+ENTRYPOINT ~/docker-entrypoint.sh
