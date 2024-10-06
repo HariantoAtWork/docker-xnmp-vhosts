@@ -1,0 +1,42 @@
+server {
+	listen 80;
+	server_name ~^example\.com(\.localhost)?$;
+	return 301 https://$host$request_uri;
+}
+
+server {
+	include /nginx/snippets/ssl-example.com.conf;
+
+	server_name ~^example\.com(\.localhost)?$;
+	root /vhosts/example.com/httpdocs;
+	index index.html index.php;
+
+	location / {
+		try_files $uri $uri/ /index.php$is_args$args;
+	}
+
+	include /nginx/snippets/php-fpm-latest.conf;
+}
+
+# Subdomains
+server {
+	listen 80;
+	server_name ~^((?<subdomain>.*)\.)example\.com(\.localhost)?$;
+	return 301 https://$host$request_uri;
+}
+
+server {
+	include /nginx/snippets/ssl-example.com.conf;
+
+	server_name ~^((?<subdomain>.*)\.)example\.com(\.localhost)?$;
+	root /vhosts/example.com/subdomains/${subdomain}/httpdocs;
+	autoindex on;
+	index index.html index.php;
+
+	location / {
+		try_files $uri $uri.html $uri/ /index.html /index.php$is_args$args;
+		include /nginx/snippets/snippet-location-root-cors.conf;
+	}
+
+	include /nginx/snippets/php-fpm-latest.conf;
+}
