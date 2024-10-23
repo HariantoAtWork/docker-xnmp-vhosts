@@ -27,18 +27,8 @@ Available pages
 
 > Make sure you set your host file these domains to 127.0.0.1
 
-### Optional: Dnsmasq
 
-File: /etc/resolver/localhost
-
-```
-127.0.0.1
-```
-
-> Create this file as user _root_
-
-
-PhpMyAdmin
+## PhpMyAdmin
 
 - check: http://localhost:8080/
 - user: root, pass: root
